@@ -1,10 +1,8 @@
-# google-girl-hackathon-2024-solution
- pseudo code :
- Initialize read_latency_sum, write_latency_sum, total_reads, total_writes to 0
+Initialize read_latency_sum, write_latency_sum, total_reads, total_writes to 0
 Initialize bandwidth_sum, total_transactions to 0
 Initialize last_read_timestamp, last_write_timestamp to -1
 
-For each entry in the monitor output:
+For each entry in the interface monitor output:
     If TxnType is Read:
         If last_read_timestamp is not -1:
             read_latency_sum += current_timestamp - last_read_timestamp
@@ -21,9 +19,6 @@ For each entry in the monitor output:
 Calculate average_read_latency = read_latency_sum / total_reads
 Calculate average_write_latency = write_latency_sum / total_writes
 Calculate average_bandwidth = bandwidth_sum / total_transactions
-This pseudocode efficiently calculates the average latency and bandwidth using the monitor output provided by the simulator. It ensures robustness by initializing variables appropriately and handling cases where there are no read or write transactions.
-
-#explanation
 
 
 2. Design Document for Using Reinforcement Learning:
